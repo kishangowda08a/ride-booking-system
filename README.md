@@ -95,3 +95,45 @@ Alice accepted the ride.
 Ride started...
 Ride completed! Fare: 200.0
 Paid 200.0 using card.
+
+
+
+Code explained in Detail
+
+Code Division (in Brief)
+Base Class → User
+Common properties: id, name
+Parent for Rider & Driver
+Used for: Code reuse
+
+Child Classes → Rider, Driver
+Rider → requests ride
+Driver → accepts ride, tracks availability
+ Used for: Specialized behavior
+
+ Data Class → Location
+Stores coordinates (latitude, longitude)
+Used for: Clean data representation
+
+Payment System
+Payment (interface)
+CashPayment, CardPayment, WalletPayment
+ Used for: Flexible payment handling
+
+ Core Logic → Ride
+Manages:
+Rider
+Driver
+Status
+Fare
+Used for: Ride lifecycle management
+
+ Controller → RideManager
+Stores drivers
+Assigns available driver
+ Used for: Business logic separation
+
+Entry Point → Main
+Creates objects
+Runs the flow
+ Used for: Execution
