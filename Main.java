@@ -180,7 +180,15 @@ public class Main {
 
         // Simulate ride
         ride.startRide();
-        Payment payment = new WalletPayment(); // try CashPayment or WalletPayment
+        Payment payment = new WalletPayment();
         ride.completeRide(payment);
+
+        //  ride.startRide();
+        // Payment payment = new CashPayment();
+        // ride.completeRide(payment);
+
+        //  ride.startRide();
+        // Payment payment = new CardPayment();
+        // ride.completeRide(payment);
     }
 }
